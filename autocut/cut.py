@@ -3,12 +3,12 @@ from pydub import AudioSegment
 import pandas as pd
 import os
 
-### CHANGE YOUR FILE NAME HERE ###
-
-FILE_NAME = "example"
-AUDIO_FORMAT = "mp3"
-
-### CHANGE YOUR FILE NAME HERE ###
+# Load the file name
+file_path = 'your_file_name_here.txt'
+with open(file_path, 'r') as file:
+    content = file.read()
+FILE_NAME = content[0]
+AUDIO_FORMAT = content[1]
 
 # Load the audio
 check_file_load = 0
@@ -38,6 +38,7 @@ if len(time_stamp) != 0:
     check_file_load += 1
 else:
     print(FILE_NAME + ".tsv is not founded.")
+
 # Split the audio and save segments
 EXPORT_PATH = "output"
 if (check_file_load == 2):
