@@ -4,11 +4,10 @@ import pandas as pd
 import os
 
 # Load the file name
-file_path = 'your_file_name_here.txt'
-with open(file_path, 'r') as file:
-    content = file.read()
-FILE_NAME = content[0]
-AUDIO_FORMAT = content[1]
+with open('your_file_name_here.txt', 'r') as file:
+    content = file.readlines()
+    FILE_NAME = content[0].strip()
+    AUDIO_FORMAT = content[1].strip()
 
 # Load the audio
 check_file_load = 0
@@ -22,7 +21,7 @@ try:
         audio = AudioSegment.from_file(file)
     print(FILE_NAME + "." + AUDIO_FORMAT + " is successfully loaded.")
     check_file_load += 1
-except print(0):
+except:
     print(FILE_NAME + "." + AUDIO_FORMAT + " is not founded.")
     check_file_load -= 1
 
