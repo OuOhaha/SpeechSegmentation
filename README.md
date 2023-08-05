@@ -1,9 +1,9 @@
 # SpeechSegmentation
  Automatically split audio with the assistance of whisper.
- Mainly support cutting audio files in mp3 and wav formats, using the tsv format output from whisper as timestamps.
+ Mainly support cutting audio files in "mp3" and "wav" formats, using the "tsv" format output from whisper as timestamps.
  The audio files and tsv need to have the same name.
  If you want to modify the filename, please make changes in "your_file_name_here.txt".
  *The filename does not require an extension; otherwise, errors may occur.*
- Simply execute cut.py to perform audio file segmentation.
+ Execute "cut.py" to perform audio file segmentation.
  
  If you don't have whisper environment yet, check this -> [openai whisper](https://github.com/openai/whisper "openai whisper")
